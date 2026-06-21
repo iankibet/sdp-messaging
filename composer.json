@@ -1,0 +1,27 @@
+{
+    "name": "iankibet/sdp-messaging",
+    "description": "Unified, transport-agnostic messaging layer (QStash, direct HTTP; pluggable to Kafka / Redis pub-sub) for SDP services.",
+    "type": "library",
+    "license": "MIT",
+    "version": "1.0.0",
+    "require": {
+        "php": ">=8.1",
+        "illuminate/support": "^11.0 || ^12.0 || ^13.0",
+        "illuminate/http": "^11.0 || ^12.0 || ^13.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Iankibet\\Messaging\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Iankibet\\Messaging\\MessagingServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
