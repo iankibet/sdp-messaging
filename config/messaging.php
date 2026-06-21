@@ -15,7 +15,7 @@ return [
     | Supported: "qstash", "direct"
     |
     */
-    'driver' => env('MESSAGING_DRIVER', 'direct'),
+    'driver' => env('MESSAGING_DRIVER', 'qstash'),
 
     /*
     |--------------------------------------------------------------------------
