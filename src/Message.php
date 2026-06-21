@@ -26,6 +26,17 @@ class Message
         $this->timestamp = $timestamp ?: now()->timestamp;
     }
 
+    /**
+     * Destination the producer wants completion confirmations sent to, if any.
+     * Carried in meta so the library stays free of any tracking concern.
+     */
+    public function replyTo(): ?string
+    {
+        $replyTo = $this->meta['reply_to'] ?? null;
+
+        return $replyTo !== null ? (string) $replyTo : null;
+    }
+
     public function toArray(): array
     {
         return [
